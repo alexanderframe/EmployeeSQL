@@ -10,10 +10,10 @@ FROM employees AS e
 -- TASK 2 - List employees who were hired in 1986
 
 SELECT emp_no, 
-       CONCAT(first_name, ' ', last_name) AS Employee name,
+       CONCAT(first_name, ' ', last_name) AS "Employee Name",
        hire_date
-FROM salaries
-WHERE hire_date LIKE ('%1986');
+FROM employees
+WHERE hire_date LIKE ('1986%');
 
 -----------------------------------------------------------------------------
 
@@ -32,7 +32,7 @@ FROM employees AS e
 -----------------------------------------------------------------------------
 
 -- TASK 4 - List the department of each employee with the following information: 
-employee number, last name, first name, department name
+-- employee number, last name, first name, department name
 
 SELECT d.dept_name, e.emp_no, e.last_name, e.first_name
 FROM employees AS e

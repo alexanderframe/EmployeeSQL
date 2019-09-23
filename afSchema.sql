@@ -66,29 +66,3 @@ REFERENCES "employees" ("emp_no");
 
 ALTER TABLE "titles" ADD CONSTRAINT "fk_titles_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
-
--- Import data from CSV files into tables
-
-COPY departments
-FROM 'F:\BootCamp\DataViz\demo\UT-MCB-DATA-PT-07-2019-U-C\homework-instructions\09-SQL\EmployeeSQL\data\departments.csv'
-DELIMITER ',' CSV HEADER;
-
-COPY dept_emp
-FROM 'F:\BootCamp\DataViz\demo\UT-MCB-DATA-PT-07-2019-U-C\homework-instructions\09-SQL\EmployeeSQL\data\dept_emp.csv'
-DELIMITER ',' CSV HEADER;
-
-COPY dept_manager
-FROM 'F:\BootCamp\DataViz\demo\UT-MCB-DATA-PT-07-2019-U-C\homework-instructions\09-SQL\EmployeeSQL\data\dept_manager.csv'
-DELIMITER ',' CSV HEADER;
-
-COPY employees
-FROM 'F:\BootCamp\DataViz\demo\UT-MCB-DATA-PT-07-2019-U-C\homework-instructions\09-SQL\EmployeeSQL\data\employees.csv'
-DELIMITER ',' CSV HEADER;
-
-COPY salaries
-FROM 'F:\BootCamp\DataViz\demo\UT-MCB-DATA-PT-07-2019-U-C\homework-instructions\09-SQL\EmployeeSQL\data\salaries.csv'
-DELIMITER ',' CSV HEADER;
-
-COPY titles
-FROM 'F:\BootCamp\DataViz\demo\UT-MCB-DATA-PT-07-2019-U-C\homework-instructions\09-SQL\EmployeeSQL\data\titles.csv'
-DELIMITER ',' CSV HEADER;
